@@ -2,7 +2,7 @@
 
 function BubbleSort(myTable) {
     'use strict';
-    for(var i=0; i<myTable.length-1; i++){
+    for(var i=0; i<myTable.length; i++){
         if ( typeof(myTable[i]) === 'string'  )
         {
             return false;
@@ -11,7 +11,7 @@ function BubbleSort(myTable) {
     var change, temp;
     do {
         change = false;
-        for(var j=0; j<myTable.length-1; j++) {
+        for(var j=0; j<myTable.length; j++) {
             if (myTable[j+1] < myTable[j]) {
                 temp = myTable[j];
                 myTable[j] = myTable[j+1];
