@@ -36,11 +36,15 @@ describe('Bubble Sort', function ()
         });
         it('should return false when "abcd" is not a number', function ()
         {
-            expect(app.BubbleSort(['abcd',2,-3,4,5,1,5,56])).to.eql(false);
+            expect(app.BubbleSort(["abcd",2,-3,4,5,1,5,56])).to.eql(false);
         });
         it('should return false when "v" is not a number', function ()
         {
             expect(app.BubbleSort([2,-3,4,"v",1,5,56])).to.eql(false);
+        });
+        it('should return false when "aa" and "bb" is not a number', function ()
+        {
+            expect(app.BubbleSort(['aa','bb'])).to.eql(false);
         });
         it('should return false when "dd" is not a number', function ()
         {
