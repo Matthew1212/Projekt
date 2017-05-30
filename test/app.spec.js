@@ -13,6 +13,10 @@ describe('Bubble Sort', function ()
             expect(app.BubbleSort([2,3,4,5,1,5,56])).to.eql([1,2,3,4,5,5,56]);
             expect(app.BubbleSort([2,4,4,4,4,1,22])).to.eql([1,2,4,4,4,4,22]);
         });
+        it('should return sort number with  decimal numbers', function ()
+        {
+            expect(app.BubbleSort([5.5,3.2,2.0])).to.eql([2.0,3.2,5.5]);
+        });
     });
 
     describe('when numbers with negative numbers', function ()
@@ -21,6 +25,10 @@ describe('Bubble Sort', function ()
         {
             expect(app.BubbleSort([-22,3,4,-5,1,5,56])).to.eql([-22,-5,1,3,4,5,56]);
             expect(app.BubbleSort([2,-3,4,5,1,5,56])).to.eql([-3,1,2,4,5,5,56]);
+        });
+        it('should return sort number with negative decimal numbers', function ()
+        {
+            expect(app.BubbleSort([-22.0,3.5,4.5,-5.8])).to.eql([-22.0,-5.8,3.5,4.5]);
         });
     });
 
@@ -50,7 +58,6 @@ describe('Bubble Sort', function ()
         {
             expect(app.BubbleSort([2,-3,4,"dd",1,5,56])).to.eql(false);
         });
-
     });
 });
 
